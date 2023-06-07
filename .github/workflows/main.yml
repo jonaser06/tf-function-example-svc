@@ -6,7 +6,7 @@ on:
       - main
 
 env:
-  HELLOWORLD: 'Hola mundo'
+  HELLOWORLD: 'Hola mundo.'
 
 jobs:
   Pipeline:
