@@ -1,0 +1,31 @@
+name: Pipeline
+
+on: 
+  push:
+    branches:
+      - main
+
+env:
+  HELLOWORLD: 'Hola mundo'
+
+jobs:
+  Pipeline:
+    name: Default
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    steps:
+
+    - name: Checkout
+      uses: actions/checkout@v3
+    
+    - name: Use Actions
+      uses: actions/checkout@v3
+      with:
+        repository: jonaser06/scripts-cicd
+        ref: main
+        path: .action/
+    
+    - name: Building...
+      uses: ./.action/workflows/function
+      with:
+        AWS_DEFAULT_REGION: 'us-east-1'
