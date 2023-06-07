@@ -23,6 +23,7 @@ jobs:
       with:
         repository: jonaser06/scripts-cicd
         ref: main
+        token: ${{secrets.GH_TOKEN}}
         path: .action/
     
     - name: Building...
