@@ -9,5 +9,5 @@ GIT_HOME = $(shell echo "$(PWD)")
 else
 GIT_HOME = $(shell echo "$(PWD)/.action")
 endif
-
+-include .action/makefiles/*.mk
 -include makefiles/*.mk
