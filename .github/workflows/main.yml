@@ -5,9 +5,6 @@ on:
     branches:
       - main
 
-env:
-  HELLOWORLD: 'Hola mundo.'
-
 jobs:
   Pipeline:
     name: Default
@@ -26,7 +23,7 @@ jobs:
         token: ${{secrets.GH_TOKEN}}
         path: .action/
     
-    - name: Building...
+    - name: Execute Function
       uses: ./.action/workflows/function
       with:
         AWS_DEFAULT_REGION: 'us-east-1'
