@@ -1,0 +1,22 @@
+{
+    "name": "servicio-prueba",
+    "version": "1.0.0",
+    "description": "Servicio de prueba",
+    "main": "handler.ts",
+    "scripts": {
+        "test": "jest",
+        "lint": "eslint",
+        "compile": "tsc",
+        "build:prod": "esbuild src/functions/**/*.ts --bundle --minify --outdir=dist --outbase=src --sourcemap=inline --platform=node --target=node16.16.0",
+        "watch": "esbuild src/functions/**/*.ts --bundle --minify --outdir=dist --outbase=src --sourcemap=inline --platform=node --target=node16.16.0 --watch",
+        "invoke": "node invoke.js"
+    },
+    "author": "Jorge",
+    "license": "ISC",
+    "dependencies": {
+        
+    },
+    "devDependencies": {
+        
+    }
+}
